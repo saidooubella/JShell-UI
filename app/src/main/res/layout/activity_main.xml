@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<android.support.v7.widget.RecyclerView
+		android:id="@+id/log_list"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:paddingBottom="16dp"
+		android:clipToPadding="false"
+		android:paddingTop="16dp"/>
+
+	<View
+		android:background="?android:attr/dividerVertical"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"/>
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:typeface="monospace"
+			android:textSize="16sp"
+			android:paddingBottom="16dp"
+			android:paddingStart="16dp"
+			android:paddingTop="16dp"
+			android:text="&gt;&gt; "/>
+
+		<EditText
+			android:id="@+id/input_field"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="#00000000"
+			android:typeface="monospace"
+			android:textSize="16sp"
+			android:paddingBottom="16dp"
+			android:paddingEnd="16dp"
+			android:paddingTop="16dp"
+			android:hint="@string/type_a_command"/>
+
+	</LinearLayout>
+
+	<View
+		android:background="?android:attr/dividerVertical"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"/>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="85dp">
+
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/suggestions_list"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:clipToPadding="false"
+			android:scrollbars="@null"
+			android:padding="16dp"/>
+
+		<ProgressBar
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:id="@+id/in_progress_bar"/>
+
+	</FrameLayout>
+
+</LinearLayout>
+
